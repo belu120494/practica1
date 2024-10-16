@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChiCoffee</title>
+    {% with url = url_for('static', filename='css/normalize.css') %}
+    <link rel="stylesheet" href="{{ url }}" />
+    {% endwith %}
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap"
+    />
+    {% with url = url_for('static', filename='css/style.css') %}
+    <link rel="stylesheet" href="{{ url }}" />
+    {% endwith %}
+  </head>
+  <body>
+    <div class="entrada__contenido">
+      <h4>Datos exitosamente recibidos!!</h4>
+      <p class="widget-curso__label">
+        Hola, {{ nombre }}, tu mensaje con la cuenta {{ email }} ha sido
+        enviada, muy pronto alguien del equipo se comunicará contigo.
+      </p>
+      <p class="widget-curso__label">
+        A continuación una vista previa de su mensaje: <i>"{{ mensaje }}"</i>
+      </p>
+    </div>
+    <a href="/" class="boton boton--primario">Volver</a>
+    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+  </body>
+</html>

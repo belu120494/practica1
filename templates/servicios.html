@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChiCoffee</title>
+    {% with url = url_for('static', filename='css/normalize.css') %}
+    <link rel="stylesheet" href="{{ url }}" />
+    {% endwith %} {% with url = url_for('static', filename='css/style.css') %}
+    <link rel="stylesheet" href="{{ url }}" />
+    {% endwith %}
+  </head>
+  <body>
+    <header class="header">
+      <div class="contenedor">
+        <div class="barra">
+          <a class="logo" href="/">
+            <h1 class="logo__nombre no-margin centrar-texto">
+              Chi<span class="logo__bold">Coffee</span>
+            </h1>
+          </a>
+
+          <nav class="navegacion">
+            <a href="quienes.html" class="navegacion__enlace">¿Quiénes Somos?</a>
+            <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+            <a href="noticias.html" class="navegacion__enlace">Noticias</a>
+            <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__texto">
+        <h2 class="no-margin">Chi Coffee con consejos y cursos</h2>
+        <p class="no-margin">
+          Aprende de los expertos con las mejores recetas y consejos
+        </p>
+      </div>
+    </header>
+
+    <div class="contenedor contenido-principal">
+      <main class="blog">
+        <h3>Nuestros Servicios</h3>
+
+        <article class="entrada">
+          <div class="entrada__imagen">
+            <picture>
+              <img src="{{ url_for('static', filename='img/blog1.webp') }}" alt="imagen blog" loading="lazy" />
+            </picture>
+          </div>
+
+          <div class="entrada__contenido">
+            <h4 class="no-margin">Tipos de Granos de Café</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum vel
+              quisquam perferendis! Facilis rerum est error facere praesentium
+              ducimus fugiat sit. Labore quo corrupti nulla unde eaque placeat
+              consequatur explicabo.
+            </p>
+            <a href="entrada.html" class="boton boton--primario"
+              >Leer Entrada</a
+            >
+          </div>
+        </article>
+
+        <article class="entrada">
+          <div class="entrada__imagen">
+            <picture>
+              <img src="{{ url_for('static', filename='img/blog2.webp') }}" alt="imagen blog" loading="lazy" />
+            </picture>
+          </div>
+
+          <div class="entrada__contenido">
+            <h4 class="no-margin">3 Deliciosas Recetas de Café</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum vel
+              quisquam perferendis! Facilis rerum est error facere praesentium
+              ducimus fugiat sit. Labore quo corrupti nulla unde eaque placeat
+              consequatur explicabo.
+            </p>
+            <a href="entrada.html" class="boton boton--primario"
+              >Leer Entrada</a
+            >
+          </div>
+        </article>
+
+        <article class="entrada">
+          <div class="entrada__imagen">
+            <picture>
+              <img src="{{ url_for('static', filename='img/blog3.webp') }}" alt="imagen blog" loading="lazy" />
+            </picture>
+          </div>
+
+          <div class="entrada__contenido">
+            <h4 class="no-margin">Beneficios del Café</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum vel
+              quisquam perferendis! Facilis rerum est error facere praesentium
+              ducimus fugiat sit. Labore quo corrupti nulla unde eaque placeat
+              consequatur explicabo.
+            </p>
+            <a href="entrada.html" class="boton boton--primario"
+              >Leer Entrada</a
+            >
+          </div>
+        </article>
+      </main>
+
+      <aside class="sidebar">
+        <h3>Cursos y Talleres</h3>
+
+        <ul class="cursos no-padding">
+          <li class="widget-curso">
+            <h4 class="no-margin">Técnicas de Extracción de Café</h4>
+            <p class="widget-curso__label">
+              Precio: <span class="widget-curso__info">Gratis</span>
+            </p>
+            <p class="widget-curso__label">
+              Cupo: <span class="widget-curso__info">20</span>
+            </p>
+            <a href="https://wa.me/59171919071" class="boton boton--secundario"
+              >Más Información sobre Nuestros Cursos</a
+            >
+          </li>
+          <li class="widget-curso">
+            <h4 class="no-margin">4 Recetas de Café para Principiantes</h4>
+            <p class="widget-curso__label">
+              Precio: <span class="widget-curso__info">Gratis</span>
+            </p>
+            <p class="widget-curso__label">
+              Cupo: <span class="widget-curso__info">20</span>
+            </p>
+            <a href="https://wa.me/59171919071" class="boton boton--secundario"
+              >Más Información sobre Nuestros Cursos</a
+            >
+          </li>
+        </ul>
+      </aside>
+    </div>
+
+    <footer class="footer">
+      <div class="contenedor">
+        <div class="barra">
+          <a class="logo" href="/">
+            <h1 class="logo__nombre no-margin centrar-texto">
+              Chi<span class="logo__bold">Coffee</span>
+            </h1>
+          </a>
+
+          <nav class="navegacion">
+            <h3>Síguenos</h3>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/" class="navegacion__enlace"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" class="navegacion__enlace"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com/" class="navegacion__enlace"
+                  >YouTube</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="navegacion">
+            <a href="quienes.html" class="navegacion__enlace">¿Quiénes Somos?</a>
+            <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+            <a href="noticias.html" class="navegacion__enlace">Noticias</a>
+            <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+  </body>
+</html>

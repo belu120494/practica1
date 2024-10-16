@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Página Web de Chi Coffee" />
+    <title>ChiCoffee</title>
+    <!-- Preload -->
+    {% with url = url_for('static', filename='css/normalize.css') %}
+    <link rel="preload" href="{{ url }}" as="style" />
+    {% endwith %}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/normalize.css') }}"
+    />
+    {% with url = url_for('static', filename='css/style.css') %}
+    <link rel="preload" href="{{ url }}" as="style" />
+    {% endwith %}
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='css/style.css') }}"
+    />
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      as="font"
+      crossorigin="crossorigin"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header class="header">
+      <div class="contenedor">
+        <div class="barra">
+          <a href="/" class="logo">
+            <h1 class="no-margin centrar-texto logo__nombre">
+              Chi<span class="logo__bold">Coffee</span>
+            </h1>
+          </a>
+
+          <nav class="navegacion">
+            <a href="quienes.html" class="navegacion__enlace">¿Quiénes Somos?</a>
+            <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+            <a href="noticias.html" class="navegacion__enlace">Noticias</a>
+            <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__texto">
+        <h2 class="no-margin">Chi Coffee con Consejos y Cursos</h2>
+        <p class="no-margin">
+          Aprende de los expertos con las mejores recetas y consejos
+        </p>
+      </div>
+    </header>
+
+    <main class="contenedor">
+      <h3 class="centrar-texto">Testimonios</h3>
+
+      <div class="curso">
+        <div class="curso__imagen">
+          <img src="{{ url_for('static', filename='img/dafne.jpg') }}" alt="Dafne Arce" width="250">
+        </div>
+        <div class="curso__informacion">
+          <h4 class="no-margin">DAFNE ARCE CONDORI</h4>
+          <p class="curso__label">
+            Ing. en Biotecnología
+            <span class="curso__info">La Paz, Bolivia</span>
+          </p>
+          <p class="curso__descripcion">
+            "Cuando pruebas una taza de café artesanal en Chi Coffee, sientes el
+            cuidado que le ponen a cada parte del proceso desde que los siembran
+            hasta que llega a tu taza, al llegar a tu boca un sin fin de
+            emociones estallan en el paladar y reconfortan el alma."
+          </p>
+        </div>
+      </div>
+
+      <div class="curso">
+        <div class="curso__imagen">
+            <img src="{{ url_for('static', filename='img/shie.jpg') }}" alt="Shirey Arce" width="250" />
+        </div>
+        <div class="curso__informacion">
+          <h4 class="no-margin">SHIRLEY ARCE</h4>
+          <p class="curso__label">
+            Directora Ministerio de Educación
+            <span class="curso__info">Cochabamba, Bolivia</span>
+          </p>
+          <p class="curso__descripcion">
+            "La cafeteria es un lugar de una paz impresionante. Ya he visitado
+            varias veces y siempre cuando vuelvo me siento como en mi propia
+            familia. La primera vez vine a tomar fotos, la segunda ya con el
+            interés de conocer más el café y la última vez vine con mi socia a
+            buscar cafés para exportación".
+          </p>
+        </div>
+      </div>
+
+      <div class="curso">
+        <div class="curso__imagen">
+            <img src="{{ url_for('static', filename='img/sandra.jpg') }}" alt="Sandra Condori" width="250" />
+        </div>
+        <div class="curso__informacion">
+          <h4 class="no-margin">SANDRA CONDORI MAMANI</h4>
+          <p class="curso__label">
+            C.E.O. Gaban Cueros
+            <span class="curso__info">La Paz, Bolivia</span>
+          </p>
+          <p class="curso__descripcion">
+            "Con solo probar una taza en Chi Coffee, nos ha ofrecido la mejor
+            calidad, experiencia, capacitación, y el mejor sabor de un café de
+            especialidad. Ya son 6 años mezclando el mejor café de La Paz con
+            nuestros deliciosos postres, dando como resultado la combinación
+            perfecta".
+          </p>
+        </div>
+      </div>
+
+      <div class="curso">
+        <div class="curso__imagen">
+            <img src="{{ url_for('static', filename='img/ximena.jpg') }}" alt="Ximena Arce" width="250" />
+        </div>
+        <div class="curso__informacion">
+          <h4 class="no-margin">XIMENA LUZ ARCE</h4>
+          <p class="curso__label">
+            Gerente General BCP
+            <span class="curso__info">Tarija, Bolivia</span>
+          </p>
+          <p class="curso__descripcion">
+            "Fue un momento agradable visitar la cafeteria Chi Coffee durante mi
+            viaje a La Paz.Una taza de café fresco y fragante mientras mirando
+            el hermoso paisaje fue suficiente para darle un descanso al cuerpo
+            cansado del viaje".
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="contenedor">
+        <div class="contenedor">
+          <div class="barra">
+            <a href="/" class="logo">
+              <h1 class="no-margin centrar-texto logo__nombre">
+                Chi<span class="logo__bold">Coffee</span>
+              </h1>
+            </a>
+
+            <nav class="navegacion">
+              <h3>Síguenos</h3>
+              <ul>
+                <li>
+                  <a href="https://www.facebook.com/" class="navegacion__enlace">Facebook</a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/" class="navegacion__enlace">Instagram</a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/" class="navegacion__enlace">YouTube</a>
+                </li>
+              </ul>
+            </nav>
+
+            <nav class="navegacion">
+              <a href="quienes.html" class="navegacion__enlace">¿Quiénes Somos?</a>
+              <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+              <a href="noticias.html" class="navegacion__enlace">Noticias</a>
+              <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+  </body>
+</html>

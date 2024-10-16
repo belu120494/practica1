@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ChiCoffee</title>
+    {% with url = url_for('static', filename='css/normalize.css') %}
+    <link rel="stylesheet" href="{{ url }}" />
+    {% endwith %} {% with url = url_for('static', filename='css/style.css') %}
+    <link rel="stylesheet" href="{{ url }}" />
+    {% endwith %}
+  </head>
+  <body>
+    <header class="header">
+      <div class="contenedor">
+        <div class="barra">
+          <a class="logo" href="/">
+            <h1 class="logo__nombre no-margin centrar-texto">
+              Chi<span class="logo__bold">Coffee</span>
+            </h1>
+          </a>
+
+          <nav class="navegacion">
+            <a href="quienes.html" class="navegacion__enlace">¿Quiénes Somos?</a>
+            <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+            <a href="noticias.html" class="navegacion__enlace">Noticias</a>
+            <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+          </nav>
+        </div>
+      </div>
+
+      <div class="header__texto">
+        <h2 class="no-margin">Chi Coffee con consejos y cursos</h2>
+        <p class="no-margin">
+          Aprende de los expertos con las mejores recetas y consejos
+        </p>
+      </div>
+    </header>
+
+    <main class="contenedor">
+      <h3 class="centrar-texto">Nuestra Historia</h3>
+
+      <div class="sobre-nosotros">
+        <div class="sobre-nosotros__imagen">
+          <img src="{{ url_for('static', filename='img/nosotros.jpg') }}" alt="imagen nosotros" />
+        </div>
+
+        <div class="sobre-nosotros__texto">
+          <p>
+            Chi Coffee es una pequeña cafetería boliviana con una larga
+            tradición. Fundada en la década de 1950 por Don Marcio, se convirtió
+            rápidamente en un lugar de encuentro para los paceños. Su secreto:
+            un café de excelente calidad, cultivado en las tierras bajas de
+            Bolivia y preparado con mucho cariño.
+          </p>
+          <p>
+            Con el paso de los años, la cafetería se expandió, pero sin perder
+            su esencia. Hoy en día, "Chi Coffee" es una cadena de cafeterías que
+            sigue ofreciendo un ambiente acogedor y un café de primera calidad,
+            manteniendo viva la tradición boliviana.
+          </p>
+        </div>
+      </div>
+
+      <h3 class="centrar-texto">Misión</h3>
+      <div class="sobre-nosotros__texto">
+        <p>
+          Revolucionar la cultura del café en Bolivia, ofreciendo productos y
+          experiencias innovadoras que satisfagan los paladares más exigentes y
+          sorprendan a nuestros clientes.
+        </p>
+      </div>
+
+      <h3 class="centrar-texto">Visión</h3>
+      <div class="sobre-nosotros__texto">
+        <p>
+          Ser reconocidos como la cafetería de referencia en Bolivia, donde los
+          clientes puedan disfrutar de un café de alta calidad, conectarse con
+          la comunidad y celebrar los sabores de nuestro país.
+        </p>
+      </div>
+
+      <h3 class="centrar-texto">Nuestro Equipo</h3>
+
+      <div class="curso">
+        <div class="curso__imagen">
+          <img src="{{ url_for('static', filename='img/gerente.jpg') }}" alt="gerente" width="200" />
+        </div>
+        <div class="curso__informacion">
+          <h4 class="no-margin">Gerente General: María Elena Ramírez</h4>
+          <p class="curso__label">
+            <span class="curso__info">
+              <ul>
+                <li>Responsable de la visión estratégica de la cafetería.</li>
+                <li>Supervisa todas las áreas de la operación.</li>
+                <li>Gestiona las relaciones con proveedores y clientes.</li>
+              </ul>
+            </span>
+          </p>
+        </div>
+
+        <div class="curso__imagen">
+          <img src="{{ url_for('static', filename='img/subgerente.jpg') }}" alt="subgerente" width="200" />
+        </div>
+        <div class="curso__informacion">
+          <h4 class="no-margin">
+            Subgerente de Operaciones: Juan Carlos Mendoza
+          </h4>
+          <p class="curso__label">
+            <span class="curso__info">
+              <ul>
+                <li>Supervisa las operaciones diarias de la cafetería.</li>
+                <li>Gestiona al personal de cocina y sala.</li>
+                <li>Garantiza la calidad de los productos y servicios.</li>
+              </ul>
+            </span>
+          </p>
+        </div>
+
+        <div class="curso__imagen">
+          <img src="{{ url_for('static', filename='img/barista.jpg') }}" alt="barista" width="200" />
+        </div>
+        <div class="curso__informacion">
+          <h4 class="no-margin">Barista Jefe: Ana María Gutiérrez</h4>
+          <p class="curso__label">
+            <span class="curso__info">
+              <ul>
+                <li>Especialista en la preparación de café.</li>
+                <li>Capacita al personal de barra.</li>
+                <li>Crea nuevas bebidas y combinaciones.</li>
+              </ul>
+            </span>
+          </p>
+        </div>
+
+        <div class="curso__imagen">
+          <img src="{{ url_for('static', filename='img/cocinero.jpg') }}" alt="cocinero" width="200" />
+        </div>
+        <div class="curso__informacion">
+          <h4 class="no-margin">Cocinero: Pedro Quispe</h4>
+          <p class="curso__label">
+            <span class="curso__info">
+              <ul>
+                <li>
+                  Prepara los alimentos y snacks que se ofrecen en la cafetería.
+                </li>
+                <li>Gestiona el inventario de ingredientes.</li>
+                <li>Garantiza la higiene y seguridad alimentaria.</li>
+              </ul>
+            </span>
+          </p>
+        </div>
+
+        <div class="curso__imagen">
+          <img src="{{ url_for('static', filename='img/cajero.jpg') }}" alt="cajero" width="200" />
+        </div>
+        <div class="curso__informacion">
+          <h4 class="no-margin">Cajero: Luis Aguilar</h4>
+          <p class="curso__label">
+            <span class="curso__info">
+              <ul>
+                <li>Atiende a los clientes en caja.</li>
+                <li>Realiza el cierre de caja diario.</li>
+                <li>Gestiona los pagos y devoluciones.</li>
+              </ul>
+            </span>
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="contenedor">
+        <div class="barra">
+          <a class="logo" href="/">
+            <h1 class="logo__nombre no-margin centrar-texto">
+              Chi<span class="logo__bold">Coffee</span>
+            </h1>
+          </a>
+
+          <nav class="navegacion">
+            <h3>Follow Us</h3>
+            <ul>
+              <li>
+                <a href="https://www.facebook.com/" class="navegacion__enlace"
+                  >Facebook</a
+                >
+              </li>
+              <li>
+                <a href="https://www.instagram.com/" class="navegacion__enlace"
+                  >Instagram</a
+                >
+              </li>
+              <li>
+                <a href="https://www.youtube.com/" class="navegacion__enlace"
+                  >YouTube</a
+                >
+              </li>
+            </ul>
+          </nav>
+
+          <nav class="navegacion">
+            <a href="quienes.html" class="navegacion__enlace"
+              >¿Quiénes Somos?</a
+            >
+            <a href="servicios.html" class="navegacion__enlace">Servicios</a>
+            <a href="noticias.html" class="navegacion__enlace">Noticias</a>
+            <a href="contacto.html" class="navegacion__enlace">Contacto</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/modernizr.js') }}"></script>
+  </body>
+</html>
